@@ -1,0 +1,85 @@
+{
+    "_id":"1128400",
+    "name":"Deep Gandhi",
+    "email":"@gmail.com",
+    "num":"9892972011",
+    "product":[
+        {
+            "_id":"3066224",
+            "name":"Ender's Game",
+            "price":"100",
+            "img":"./assets/images/1.jpg"
+        },
+        {
+            "_id":"1729280",
+            "name":"The Hitchhiker's Guide to the Galaxy",
+            "price":"110",
+            "img":"./assets/images/2.jpg"
+        },
+        {
+            "_id":"3772272",
+            "name":"Eragon",
+            "price":"120",
+            "img":"./assets/images/3.jpg"
+        },
+        {
+            "_id":"1693104",
+            "name":"Cinder",
+            "price":"130",
+            "img":"./assets/images/4.jpg"
+        },
+        {
+            "_id":"2852192",
+            "name":"The Maze Runner",
+            "price":"140",
+            "img":"./assets/images/5.jpg"
+        },
+        {
+            "_id":"1725472",
+            "name":"Clockwork Angel",
+            "price":"150",
+            "img":"./assets/images/6.jpg"
+        },
+        {
+            "_id":"2158688",
+            "name":"The Hunger Games",
+            "price":"160",
+            "img":"./assets/images/7.jpg"
+        },
+        {
+            "_id":"4073888",
+            "name":"A Game of Thrones",
+            "price":"170",
+            "img":"./assets/images/8.jpg"
+        },
+        {
+            "_id":"1694112",
+            "name":"Divergent",
+            "price":"180",
+            "img":"./assets/images/9.jpg"
+        },
+        {
+            "_id":"2930256",
+            "name":"The Lightning Thief",
+            "price":"190",
+            "img":"./assets/images/10.jpg"
+        }
+        
+    ]
+   
+}
+
+
+
+
+{
+    [
+        {
+          "_id":"",
+          "name,
+          "email":"",
+            
+        }
+    ]
+}
+

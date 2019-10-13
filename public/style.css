@@ -1,0 +1,39 @@
+*  /*default settings*/
+{
+    margin:0;
+    padding:0;
+}
+
+
+/*navigation bar*/
+#nav-bar{
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.navbar-brand img{
+    height:40px;
+}
+
+#nav-bar ul li{
+    padding: 4px 5px;
+}
+
+.nav-link:hover{
+    font-size:1rem;
+    font-weight: bold
+}
+
+.navbar-toggler
+{
+    border:none!important;
+}
+.nav-link
+{
+    color:#555!important;
+    font-weight:600;
+    font-size:15px;
+}
+
+

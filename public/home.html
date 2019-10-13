@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Lang attribute-->
+
+
+<head>
+    
+    <!--Character set used in this page is Universal Transformation Format 8 bit-->
+    <meta charset="UTF-8">
+    <!--sets the width of the page to follow the screen-width of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--To make the page compactable for older version of browsers-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard: Graphs</title>
+    <link rel="stylesheet" href="home.css"></linl> <!--Linking css file-->
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    
+    <script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow202.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();
+        jQuery(document).ready(function($){ 
+            if (localStorage.getItem('advertOnce') !== 'true') {
+                $('body').append('<div id="advert-once" style="position:fixed; bottom: 10px; left: 10px;"><a href="https://www.scrolltotop.com/guide-on-how-to-make-a-website.php" target="_blank" rel="nofollow"><img src="https://i1155.photobucket.com/albums/p559/scrolltotop/makewebsite.png" width="87" height="52" border="0" alt="make a website" /></a><div class="advert-button"></div></div>')
+                localStorage.setItem('advertOnce','true');
+            } 
+            $('#advert-once .advert-button').on('click',function(){
+                $('#advert-once').hide();
+            }); 
+        });
+    </script>    
+</head>
+
+
+<body>
+    
+    
+    <div class="navbar123">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <!-- href='#' will move the scroll position to the top.-->
+                <svg width="30" height="30">
+                    <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+                </svg>
+            </a>     
+            <h1 style="color:white; padding-top:6px; padding-left: 5px; font-family: 'Francois One', sans-serif;">Dashboard</h1>       
+        </span>
+        
+        <!--Contents of navigation bar on top of the page-->
+        <ul class="navbar-nav123"> <!--Unordered list-->
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="navbar">
+      
+        
+        <!--Contents of side bar-->
+        <div style="font-family: 'Francois One', sans-serif; font-size: 20px" id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->            
+            <li active><a href="home.html" >Graphs</a></li>
+            <li><a href="admin.html">Recommendation</a></li>
+            <li><a href="Sub.html">Subscription</a></li>
+            <li><a href="offer.html">Recency</a></li>     
+            <li><a href="fraud.html">Fraud</a></li>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="c1-container mt-5" style="position: relative;width:70vw;height:auto;margin-left:200px" >
+        
+        <div class="row">
+            <div class="col-md-6" >
+                <canvas id="myChart2" width="90vw" height="100vh"></canvas>
+            </div>
+            
+            <div style= "font-family: 'Be Vietnam', sans-serif; padding-left: 120px" id="info1" class="col-md-6 mt-5 info" >
+                <h4 style="margin-right:100px;margin-top:50px;font-size: 80px">Recency</h4>
+                <p style="margin-top: 50px;margin-right: 100px;font-size: 25px">
+                    The Recency Rating Distribution is a visual representation of the timeline during which a percentage of the consumer base has joined the platform.
+                </p>    
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="c1-container mt-5" style="position: relative;width:70vw;height:auto;margin-left:200px" >
+        <div class="row">   
+            
+            <div style= "font-family: 'Be Vietnam', sans-serif" id="info1" class="col-md-6 mt-5 info" >
+                <h4 style="margin-left:100px;margin-top:50px;font-size: 80px">Frequency</h4>
+                <p style="margin-top: 50px;margin-left: 100px;font-size: 25px">
+                    The Frequency Graph represents the quantity of products bought by a particular percentage of the consumer base. 
+                </p>                
+            </div>
+            
+            <div class="col-md-6" >
+                <canvas id="myChart3" width="90vw" height="100vh"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="c1-container mt-5 mb-5" style="position: relative;width:70vw;height:auto;margin-left:200px" >
+        <div class="row">   
+            <div class="col-md-6" >
+                <canvas id="myChart1" width="90vw" height="100vh"></canvas>
+            </div>
+            <div style= "font-family: 'Be Vietnam', sans-serif" id="info1" class="col-md-6 mt-5 info" >
+                <h4 style="margin-left:100px;margin-top:50px; font-size: 80px">Monetary</h4>
+                <p style="margin-top: 50px;margin-left: 100px; font-size: 25px">
+                    The Monetary Rating Distribution is a visual representation of the spending habits of the consumer base.                     
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--Responsive Side Bar using JS-->
+    <script>
+        
+        var ctx = document.getElementById('myChart1').getContext('2d');
+        var myChart1 = new Chart(ctx, {
+            type: 'doughnut',        
+            data: {                
+                labels: ['< 938.8', '938.8 - 1222', '1222 - 1536.5', '1536.5 - 1997', '1997 <'],
+                datasets: [{
+                    borderColor: 'black',                    
+                    data: [0.2 ,0.2, 0.2, 0.2, 0.2],
+                    backgroundColor: [                
+                    "rgb(54, 162, 235)",
+                    "rgb(255, 0, 255)",                    
+                    "rgb(255, 165, 20)",
+                    "rgb(255, 99, 132)",
+                    "rgb(50, 205, 86)"],
+                    borderWidth: 0.8,
+                    
+                    fill: false,
+                    
+                }],
+            },            
+            options: {
+                legend: {
+                    display: false,
+                },            
+            },            
+        });
+        
+        
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var myChart2 = new Chart(ctx, {
+            type: 'bar',        
+            data: {                
+                labels: ['- Jan', 'Jan - March', 'March - May', 'May - July', 'July -'],
+                datasets: [{
+                    borderColor: 'black',
+                    data: [1.3867,1.3267,2.7933,34.22,60.27],
+                    backgroundColor: [                    
+                    "rgb(54, 162, 235)",
+                    "rgb(255, 0, 255)",                    
+                    "rgb(255, 165, 20)",
+                    "rgb(255, 99, 132)",
+                    "rgb(50, 205, 86)"],                
+                    borderWidth: 0.8,
+                    
+                    fill: false,
+                    
+                }],
+            },            
+            options: {
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Percentage',
+                            fontSize: 20
+                        },
+                        ticks: {
+                            fontSize: 20
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Months',
+                            fontSize: 20
+                        },
+                        ticks: {
+                            fontSize: 15
+                        }
+                    }],
+                }
+            },
+            
+        });
+        
+        var ctx = document.getElementById('myChart3').getContext('2d');
+        var myChart3 = new Chart(ctx, {
+            type: 'line',        
+            data: {                
+                labels: ['< 10', '10 - 19', '19 - 27', '27 - 36', '36 <'],
+                datasets: [{
+                    borderColor: 'black',                
+                    data: [1.3867,1.3267,2.7933,34.22,60.27],
+                    backgroundColor: [                    
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)'],                  
+                    borderWidth: 1.9,
+                    
+                    fill: false,
+                    
+                }],
+            },            
+            options: {
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Percentage',
+                            fontSize: 20
+                        },
+                        ticks: {
+                            fontSize: 20
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Quantity',
+                            fontSize: 20
+                        },
+                        ticks: {
+                            fontSize: 15
+                        }
+                    }],
+                },
+                elements: {
+                    line: {
+                        tension: 0 // disables bezier curves
+                    }
+                },                
+            },
+            
+        });
+        
+        
+        
+        
+        
+        //When the svg tag is clicked the side menu open
+        function openSlideMenu()
+        {
+            
+            document.getElementById('side-menu').style.width = '300px';  //side menu pops out
+            document.getElementById('main').style.marginLeft = '300px';  //info on page shifts as menu pops out
+            //document.getElementsById("navButton").remove();
+        }
+        //When the close btn is pressed
+        function closeSlideMenu()
+        {
+            document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+            document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+        }
+    </script>
+    
+    
+</body>

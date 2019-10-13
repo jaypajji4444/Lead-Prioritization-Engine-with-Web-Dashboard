@@ -1,0 +1,174 @@
+/*testimonials css*/
+
+#testimonials 
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.493),rgba(0,0,0,0.8)),url('assets/imgs/city.jpg');
+    background-size: cover;
+    background-position: center;
+text-align:center;
+padding-top:50px ;
+padding-bottom:50px;
+font-weight:600
+}
+
+
+#testimonials h1
+{
+    
+    text-align:center;
+    padding:15px;
+    color:white!important;
+}
+#testimonials h1::after
+{
+    content:'';
+    background:#efefef;
+    display:block;
+    height:3px;
+    width:1000px;
+    margin:20px auto 5px;
+   
+}
+#testimonials .row
+{
+    margin-top:40px;
+}
+.col-md-4
+{
+    margin:40px auto;
+ 
+}
+
+.profile
+{
+  
+    padding:20px ;
+    background-color: #efefef;
+  
+}
+.user
+{
+    width:120px;
+    height:120px;
+    border-radius:70%;
+    top:-60px;
+   
+    position: relative;
+
+
+border:5px solid grey;
+}
+
+
+
+blockquote
+{
+    font-size:20px;
+    line-height:28px;   
+}
+
+#testimonials span{
+    color:grey;
+}
+
+
+/*-----------------------Navbar--------------*/
+
+body
+{
+  font-family:'Be Vietnam', sans-serif;
+  background-color:white;
+  color: white;
+  overflow-x:hidden; /*No scroll bar to scroll in x direction*/
+  height: 737px;/*To find the height of window:var x = window.innerHeight;console.log(x);*/
+}
+
+.side-nav
+{
+  height:100%;/*covers the full page*/
+  width:0; /*initially it should not be seen and when it is opened, width becomes 250px which is executed by JS code*/
+  position:fixed;/*Will stay in its position even if the page is scrolled*/
+  list-style: none; /*to remove the dots from ul*/
+  z-index:1;/*Because its z index is more, it will be placed over anything else*/
+  top:0;
+  left:0;
+  background-color:#007bff;
+  opacity:1;
+  overflow-x:hidden; /*To hide the scroll bar*/
+  padding-top:60px;
+  transition:0.5s;/*Time taken by side bar to open*/
+}
+  
+.side-nav a
+{
+  padding:10px 10px 20px 30px;
+  text-decoration: none; /*remove the underline*/
+  font-size:25px;
+  color:white;
+  display:block; /*'block' results in line break between 2 elements*/
+  transition:0.3s;
+}
+  
+.side-nav a:hover  /* When mouse points on a particular link*/
+{
+  color:white;
+  font-weight:bold;
+  font-size: 30px;
+  list-style: none;
+  text-decoration: none;
+}
+  
+.side-nav .btn-close
+{
+  position:absolute; /*To place the close btn on the top right of side menu*/
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+
+
+/*8ddgdfnjfdbjfn*/
+
+
+
+.navbar123
+{
+  background-color:#007bff; 
+  z-index: 5; 
+  overflow:hidden;
+}
+  
+.navbar123 a
+{
+  float:left; 
+  color:white;
+  text-align:center;
+  padding:14px 16px; 
+  text-decoration:none; 
+  font-size:22px;
+}
+  
+.navbar123 ul
+{
+  margin:8px 0 0 0;
+  list-style:none; 
+}
+  
+.navbar123 a:hover
+{
+  background-color:transparent;
+  color: white;
+  font-weight:bold;
+  text-decoration: none;
+  list-style-type: none; 
+  /* font-size: 25px; */
+}
+
+
+
+#info2{
+  text-align: right;  
+}
+
+

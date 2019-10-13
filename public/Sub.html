@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard: Subscription</title>
+    
+    <link rel="stylesheet" href="sub.css">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    
+    <div class="navbar123">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <!-- href='#' will move the scroll position to the top.-->
+                <svg width="30" height="30">
+                    <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+                </svg>
+            </a>     
+            <h1 style="color:white; padding-top:6px; padding-left: 5px; font-family: 'Francois One', sans-serif;">Dashboard</h1>       
+        </span>
+        
+        <!--Contents of navigation bar on top of the page-->
+        <ul class="navbar-nav123"> <!--Unordered list-->
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="navbar">
+        
+        
+        <!--Contents of side bar-->
+        <div style="font-family: 'Francois One', sans-serif; font-size: 20px" id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->            
+            <li active><a href="home.html" >Graphs</a></li>
+            <li><a href="admin.html">Recommendation</a></li>
+            <li><a href="Sub.html">Subscription</a></li>
+            <li><a href="offer.html">Recency</a></li>        
+            <li><a href="fraud.html">Fraud</a></li>    
+        </div>
+    </div>
+    
+    
+    
+    <div class="c1-container mt-6" style="position: relative;width:75vw;height:75vh;margin:auto" >
+        <div class="row">   
+            <div class="col-md-12" >
+                <canvas id="myChart"></canvas>
+            </div>  
+        </div>             
+    </div>
+    
+    <div style= "font-family: 'Be Vietnam', sans-serif" class="text-center">
+        <button type="button" class="btn btn-primary btn-lg mt-4 mb-3 " id="btn1">Get User</button>
+        <button type="button" class="btn btn-primary btn-lg mt-4 mb-3 ml-2" style="display: none" id="btn2">Send Email</button>
+    </div>
+    
+    <div class="container">
+        <div class="row" id="jay"></div>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'],
+                datasets: [{
+                    label: 'Subscription factor',
+                    data: [12.26,17.86,9.09,14.95,4.65,10.42,0,10.07,1.66,8.82,0,3.06,0,0,4.44,.3867,0,0,0,1.51,0,0,0,0,.8167],
+                    pointStyle: 'circle',
+                    backgroundColor: '#3498DB',
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    lineTension: 0,
+                    fill:false
+                }]
+            },
+            
+        });
+        
+        
+        const button=document.getElementById("btn1");
+        const btn2=document.getElementById("btn2");
+        
+        
+        
+        const fetchData=async(e)=>{
+            e.preventDefault();
+            document.getElementById("btn2").style.display="inline-block"
+            const row=document.getElementById("jay");
+            fetch("/userSubs")
+            .then(res=>res.json())
+            .then(data=>{
+                const users=data.data;
+                console.log(users)
+                users.forEach(user=>{
+                    const col=document.createElement("div");
+                    col.classList.add("col-md-4","class-center");                
+                    col.innerHTML=`
+                    <div style= "font-family: 'Be Vietnam', sans-serif" class="profile">
+                        <img src="assets/images/my.jpg" class="user">
+                        <blockquote>
+                            Email: ${user.email}</blockquote>
+                            <h3> - ${user.first_name} ${user.last_name} - <span>${user._id}</span></h3>
+                            
+                        </div> ` ;
+                        row.appendChild(col);
+                        
+                    })
+                    
+                })
+                .catch(err=>console.log(err))
+                
+            }
+            
+            button.addEventListener("click",fetchData)// get data
+            
+            // send email
+            btn2.addEventListener("click",async(e)=>{
+                e.preventDefault();
+                alert("Emails successfully sent!");
+                const response=await fetch("/email");
+                const data=await response.json();
+                console.log("Email Send TO ALL");
+            })
+            
+            
+            
+            
+            //When the svg tag is clicked the side menu open
+            function openSlideMenu()
+            {
+                
+                document.getElementById('side-menu').style.width = '300px';  //side menu pops out
+                document.getElementById('main').style.marginLeft = '300px';  //info on page shifts as menu pops out
+                //document.getElementsById("navButton").remove();
+            }
+            //When the close btn is pressed
+            function closeSlideMenu()
+            {
+                document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+                document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+            }
+            
+            
+        </script>
+        
+    </body>
+    </html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fraud.css">
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <title>Dashboard: Fraud Detection</title>
+</head>
+<body>
+    
+        <div id="particles-js"></div>
+    
+        <script>
+            particlesJS("particles-js", 
+            {
+                "particles": {
+                    "number": {
+                        "value": 150,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#2196f3"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3.5,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#2196f3",
+                        "opacity": 0.18940440207397827,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            }
+            );
+        </script>
+    
+
+    <div class="navbar123">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <!-- href='#' will move the scroll position to the top.-->
+                <svg width="30" height="30">
+                    <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+                </svg>
+            </a>     
+            <h1 style="color:white; padding-top:6px; padding-left: 5px; font-family: 'Francois One', sans-serif;">Dashboard</h1>       
+        </span>
+        
+        <!--Contents of navigation bar on top of the page-->
+        <ul class="navbar-nav123"> <!--Unordered list-->
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="navbar">
+        
+        
+        <!--Contents of side bar-->
+        <div style="font-family: 'Francois One', sans-serif; font-size: 20px" id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->            
+            <li active><a href="home.html" >Graphs</a></li>
+            <li><a href="admin.html">Recommendation</a></li>
+            <li><a href="Sub.html">Subscription</a></li>
+            <li><a href="offer.html">Recency</a></li>   
+            <li><a href="fraud.html">Fraud</a></li>         
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4  mt-5 ml-2">
+                <h1 style="color: black;">
+                    Fraud Detection
+                </h1>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="row ml-4" style="margin-top:20px">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                    <form class="form">
+                            <div class="form-group">
+                                    <input type='text' placeholder="User ID" class="form-control" id="userId" >
+                                  </div>
+                    </form>
+                        <button type="button" class="btn btn-primary btn-lg mt-4 mb-5 " id="btn1">Check</button>
+                        <button type="button" class="btn btn-primary btn-lg mt-4 mb-5 " id="btn2">Clear</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>       
+        </div>
+
+        <div id="output" class="text-center ">
+
+        </div>
+
+
+
+    <script>
+
+const btn1=document.getElementById("btn1");
+const btn2=document.getElementById("btn2");
+async function btnClick(){
+        const input=document.getElementById("userId");
+
+        
+        const formdata=new FormData();
+        formdata.append("customer_id",input.value);   
+        const response = await fetch("http://localhost:12345/fraud", {
+            method: 'POST',   
+            body:formdata
+        });
+        const result = await response.json();
+        console.log(result);
+        const div1=document.getElementById("output");
+        const div2=document.createElement("div");
+        div2.innerHTML=`
+        <h2 style="color:black">Genuity Score:</h2>
+       <h1><b><span style="color:blue">${result.genuinity_score*100}%</span></b></h1>
+        `;
+        
+        div1.appendChild(div2)
+            
+    }
+
+btn1.addEventListener("click",btnClick)
+
+function btnClick2()
+{
+    document.getElementById("userId").value="";
+    const var123 = document.getElementById("output");
+    var123.innerHTML="";
+
+}
+
+
+btn2.addEventListener("click",btnClick2)
+
+
+
+
+
+
+
+
+
+
+
+          //When the svg tag is clicked the side menu open
+    function openSlideMenu()
+    {
+        
+        document.getElementById('side-menu').style.width = '300px';  //side menu pops out
+        document.getElementById('main').style.marginLeft = '300px';  //info on page shifts as menu pops out
+        //document.getElementsById("navButton").remove();
+    }
+    //When the close btn is pressed
+    function closeSlideMenu()
+    {
+        document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+        document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+    }
+    </script>
+    
+</body>

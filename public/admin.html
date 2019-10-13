@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    <title>Dashboard: Product Recommendation System</title>
+</head>
+<body>
+    
+        <div id="particles-js"></div>
+    
+        <script>
+            particlesJS("particles-js", 
+            {
+                "particles": {
+                    "number": {
+                        "value": 150,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#2196f3"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3.5,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#2196f3",
+                        "opacity": 0.18940440207397827,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            }
+            );
+        </script>
+
+        <div class="navbar123">
+                <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <!-- href='#' will move the scroll position to the top.-->
+                        <svg width="30" height="30">
+                            <!--Scalable Vector Graphics (svg) is used to make the icon to open side bar-->
+                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>  <!--First white line-->
+                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>  <!--Second white line-->
+                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>  <!--Third white line-->
+                        </svg>
+                    </a>     
+                    <h1 style="color:white; padding-top:6px; padding-left: 5px; font-family: 'Francois One', sans-serif;">Dashboard</h1>       
+                </span>
+                
+                <!--Contents of navigation bar on top of the page-->
+                <ul class="navbar-nav123"> <!--Unordered list-->
+                    
+                </ul>
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="navbar">
+              
+                
+                <!--Contents of side bar-->
+                <div style="font-family: 'Francois One', sans-serif; font-size: 20px" id="side-menu" class="side-nav">
+                    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!-- "&times" is preferred HTML entity for cross rather than letter 'x'-->            
+                    <li active><a href="home.html" >Graphs</a></li>
+                    <li><a href="admin.html">Recommendation</a></li>
+                    <li><a href="Sub.html">Subscription</a></li>
+                    <li><a href="offer.html">Recency</a></li>       
+                    <li><a href="fraud.html">Fraud</a></li>     
+                </div>
+            </div>
+            <div style="font-family: 'Be Vietnam', sans-serif; text-align: center; font-size: 45px ;color: black">
+                    <p>Product Recommendation System</p>
+                </div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <form class="form-inline col-md-4 ml-5 mt-2">        
+            <div class="form-group  mb-2">
+              <label  class="sr-only">Id</label>
+              <input type="text" class="form-control" id="inputId" placeholder="User ID">
+            </div>
+            <button  class="btn btn-primary ml-2 mb-2 mr-2" id="btn2">Get</button>
+            <button  class="btn btn-primary mb-2" id="btn">Clear</button>
+          </form>
+        </div>
+
+
+<div id="output">
+<div class='mb-4 mt-4' id="user">
+        <ul class="list-group" style="color:black" id="uls">
+
+            </ul>
+</div>
+<div id="product">
+    <div class="row text-center" id="rows">
+
+    </div>
+</div>
+</div>
+
+
+    <script>
+        const button=document.getElementById("btn2")
+      
+    const fetchData=async(e)=>{
+        e.preventDefault();
+        const userId=document.getElementById("inputId").value;
+        
+       
+       const response=await fetch(`/getData/${userId}`)
+       const body=await response.json();
+       const data=body.data[0];
+
+        const name=data.name;
+        const email=data.email;
+        const number=data.num;
+        //-----User...
+        const ul=document.getElementById("uls");
+        let li=document.createElement("li");
+        li.setAttribute("class","list-group-item");
+        li.innerHTML=`<div style= "font-size: 20px; font-family: 'Be Vietnam', sans-serif" class="text-center">
+            <p><span style="font-weight:bold">Name: </span>${name}</p>
+            <p><span style="font-weight:bold">Email: </span>${email}</p>
+            <p><span style="font-weight:bold">Ph. No.: </span>${number}</p>
+            </div> `;
+            ul.appendChild(li);
+////////-----products------
+            const productDiv=document.getElementById("rows");
+            const product=data.product;
+            product.forEach(element => {
+                const div=document.createElement("div");
+                div.setAttribute("class","col-md-3");
+               //div.style.width="18rem"
+                div.innerHTML=`
+                <div class="card mb-5 ml-5" style="width:18rem" >
+                <img class="card-img-top" src=${element.img} alt="Card image cap" style="height:350px";width:80px>
+  <div class="card-body">
+    <h5 class="card-title" style="color:black">${element.name}</h5>
+  </div>  `;
+
+
+productDiv.appendChild(div);
+            });
+
+
+
+       console.log(data)
+     
+        
+    }
+    button.addEventListener("click",fetchData)
+    const btn=document.getElementById("btn2");
+    btn.addEventListener("click",()=>{
+        const u=document.getElementById("ul");
+        ul.innerHTML="";
+        const row=document.getElementById("rows")
+        row.innerHTML="";
+    })
+    
+
+
+ 
+        //When the svg tag is clicked the side menu open
+        function openSlideMenu()
+        {
+            
+            document.getElementById('side-menu').style.width = '300px';  //side menu pops out
+            document.getElementById('main').style.marginLeft = '300px';  //info on page shifts as menu pops out
+            //document.getElementsById("navButton").remove();
+        }
+        //When the close btn is pressed
+        function closeSlideMenu()
+        {
+            document.getElementById('side-menu').style.width = '0';  //side menu disappers 
+            document.getElementById('main').style.marginLeft = '0';  //info shifts back to original position
+        }
+
+
+
+    </script>
+</body>
+</html>
