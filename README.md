@@ -5,13 +5,10 @@ This is an online service created by team Chernobyl for start-ups which is aimed
 
 ## Screenshots
 
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/home1.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/home2.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/home3.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/home4.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/Video%20Analytics.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/Video%20Analytics%202.JPG)
-![](https://github.com/jashmehta3300/Screenshots/blob/master/Vidalytics_img/Reddit%20Links.JPG)
+![](https://github.com/jashmehta3300/Screenshots/blob/master/Lead-Prioritization-Engine_img/img1.jpeg)
+![](https://github.com/jashmehta3300/Screenshots/blob/master/Lead-Prioritization-Engine_img/img2.jpeg)
+![](https://github.com/jashmehta3300/Screenshots/blob/master/Lead-Prioritization-Engine_img/img3.jpeg)
+![](https://github.com/jashmehta3300/Screenshots/blob/master/Lead-Prioritization-Engine_img/img4.jpeg)
 
 ## About
 
