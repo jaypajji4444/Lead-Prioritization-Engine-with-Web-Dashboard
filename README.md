@@ -1,6 +1,6 @@
 # Lead Prioritization Engine with Web Dashboard
 
-This is an online service created by team Chernobyl for start-ups which is aimed at aiding product-based startups become more data-driven, it features a plug-in compatible, real-time, neural network based product recommendation system.
+This is an online service created by team Chernobyl for start-ups which is aimed at aiding product-based startups become more data-driven, it features a plug-in compatible, real-time, neural network based product recommendation system. With the help of simple and clean visualizations, meaningful and relevant information can be inferred in no time!
 
 
 ## Screenshots
